@@ -2,7 +2,9 @@
 
 ## Overview
 
-SeedPy is a Python library designed to populate MySQL, PostgreSQL, and SQLite databases with random test data. With SeedPy, you can easily generate and insert fake but realistic data into your databases, either for testing or for other purposes. It's built on top of the Faker library for generating the data and uses Peewee for database connectivity.
+SeedPy is a Python library designed to populate MySQL, PostgreSQL, and SQLite databases with random test data. 
+With SeedPy, you can easily generate and insert fake but realistic data into your databases, either for testing or for other purposes. 
+It's built on top of the Faker library for generating the data and uses Peewee for database connectivity.
 
 ## Features
 
