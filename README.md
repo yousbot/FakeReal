@@ -31,11 +31,11 @@ mysql -u root -p < onlineStoreDB.sql
 Here's a Python script to quickly get you started with FakeReal:
 
 ```python
-from fakereal import FakeReal
+from fakereal import fakereal
 
 # Initialize FakeReal with a connection string
 connection_string = 'mysql://root:@localhost:3306/OnlineStore'
-FakeReal = FakeReal(connection_string)
+FakeReal = fakereal(connection_string)
 
 # Seed 'all' tables with 100 rows each, in batches of 10
 FakeReal.seed('all', rows=100, batch_size=10)
