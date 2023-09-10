@@ -4,14 +4,14 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name='seedpy', 
+    name='fakereal', 
     version='0.1.0',  
     author='Youssef Sbai Idrissi',  
     author_email='sbaiidrissiyoussef@gmail.com',  
     description='A Python library for seeding databases with random realistic test data.',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/yousbot/seedpy',  
+    url='https://github.com/yousbot/fakereal',  
     packages=find_packages(),  
     install_requires=[
         'peewee',

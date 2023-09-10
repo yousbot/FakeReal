@@ -6,7 +6,7 @@ import re
 import logging
 import argparse
 
-class SeedPy:
+class FakeReal:
     def __init__(self, connection_string):
         try:
             parsed_url = urlparse(connection_string)
