@@ -1,0 +1,288 @@
+INFO:root:Executing Query 1: Count records in Categories
+INFO:root:SQL: SELECT COUNT(*) FROM Categories;
+INFO:root:Results:
+INFO:root:(298,)
+INFO:root:Executing Query 2: Select all from Categories
+INFO:root:SQL: SELECT * FROM Categories LIMIT 5;
+INFO:root:Results:
+INFO:root:(15, 'Lauren Haas', 'detail')
+INFO:root:(48, 'Nicholas Williams', 'now')
+INFO:root:(73, 'Kevin Richardson', 'brother')
+INFO:root:(153, 'Suzanne Miller', 'south')
+INFO:root:(182, 'Jesse Flores', 'add')
+INFO:root:Executing Query 3: Inner Join Categories with itself using composite keys
+INFO:root:SQL: SELECT A.* FROM Categories A INNER JOIN Categories B ON A.C = B.C AND A.a = B.a AND A.t = B.t AND A.e = B.e AND A.g = B.g AND A.o = B.o AND A.r = B.r AND A.y = B.y AND A.I = B.I AND A.D = B.D LIMIT 5;
+ERROR:root:Error executing Query 3: (1054, "Unknown column 'A.C' in 'on clause'")
+ERROR:root:Failed SQL: SELECT A.* FROM Categories A INNER JOIN Categories B ON A.C = B.C AND A.a = B.a AND A.t = B.t AND A.e = B.e AND A.g = B.g AND A.o = B.o AND A.r = B.r AND A.y = B.y AND A.I = B.I AND A.D = B.D LIMIT 5;
+INFO:root:Executing Query 4: Left Join Categories with itself using composite keys
+INFO:root:SQL: SELECT A.* FROM Categories A LEFT JOIN Categories B ON A.C = B.C AND A.a = B.a AND A.t = B.t AND A.e = B.e AND A.g = B.g AND A.o = B.o AND A.r = B.r AND A.y = B.y AND A.I = B.I AND A.D = B.D LIMIT 5;
+ERROR:root:Error executing Query 4: (1054, "Unknown column 'A.C' in 'on clause'")
+ERROR:root:Failed SQL: SELECT A.* FROM Categories A LEFT JOIN Categories B ON A.C = B.C AND A.a = B.a AND A.t = B.t AND A.e = B.e AND A.g = B.g AND A.o = B.o AND A.r = B.r AND A.y = B.y AND A.I = B.I AND A.D = B.D LIMIT 5;
+INFO:root:Executing Query 5: Average of CategoryID in Categories
+INFO:root:SQL: SELECT AVG(CategoryID) FROM Categories;
+INFO:root:Results:
+INFO:root:(Decimal('4932.6342'),)
+INFO:root:Executing Query 6: Sum of CategoryID in Categories
+INFO:root:SQL: SELECT SUM(CategoryID) FROM Categories;
+INFO:root:Results:
+INFO:root:(Decimal('1469925'),)
+INFO:root:Executing Query 7: Count records in Customers
+INFO:root:SQL: SELECT COUNT(*) FROM Customers;
+INFO:root:Results:
+INFO:root:(295,)
+INFO:root:Executing Query 8: Select all from Customers
+INFO:root:SQL: SELECT * FROM Customers LIMIT 5;
+INFO:root:Results:
+INFO:root:(8, 'Bailey Nguyen', 'Rachel Mckay', 'brownscott@example.net', 'number')
+INFO:root:(33, 'Abigail Lozano', 'Eileen Crane', 'lawrence29@example.com', 'account')
+INFO:root:(49, 'Jeremiah Torres', 'Eric Owens', 'qwilson@example.com', 'front')
+INFO:root:(55, 'Vincent Davis', 'Debbie Ward', 'aosborn@example.org', 'child')
+INFO:root:(58, 'Larry Love', 'Michael Cardenas', 'richard44@example.org', 'my')
+INFO:root:Executing Query 9: Inner Join Customers with itself using composite keys
+INFO:root:SQL: SELECT A.* FROM Customers A INNER JOIN Customers B ON A.C = B.C AND A.u = B.u AND A.s = B.s AND A.t = B.t AND A.o = B.o AND A.m = B.m AND A.e = B.e AND A.r = B.r AND A.I = B.I AND A.D = B.D LIMIT 5;
+ERROR:root:Error executing Query 9: (1054, "Unknown column 'A.C' in 'on clause'")
+ERROR:root:Failed SQL: SELECT A.* FROM Customers A INNER JOIN Customers B ON A.C = B.C AND A.u = B.u AND A.s = B.s AND A.t = B.t AND A.o = B.o AND A.m = B.m AND A.e = B.e AND A.r = B.r AND A.I = B.I AND A.D = B.D LIMIT 5;
+INFO:root:Executing Query 10: Left Join Customers with itself using composite keys
+INFO:root:SQL: SELECT A.* FROM Customers A LEFT JOIN Customers B ON A.C = B.C AND A.u = B.u AND A.s = B.s AND A.t = B.t AND A.o = B.o AND A.m = B.m AND A.e = B.e AND A.r = B.r AND A.I = B.I AND A.D = B.D LIMIT 5;
+ERROR:root:Error executing Query 10: (1054, "Unknown column 'A.C' in 'on clause'")
+ERROR:root:Failed SQL: SELECT A.* FROM Customers A LEFT JOIN Customers B ON A.C = B.C AND A.u = B.u AND A.s = B.s AND A.t = B.t AND A.o = B.o AND A.m = B.m AND A.e = B.e AND A.r = B.r AND A.I = B.I AND A.D = B.D LIMIT 5;
+INFO:root:Executing Query 11: Average of CustomerID in Customers
+INFO:root:SQL: SELECT AVG(CustomerID) FROM Customers;
+INFO:root:Results:
+INFO:root:(Decimal('4859.5458'),)
+INFO:root:Executing Query 12: Sum of CustomerID in Customers
+INFO:root:SQL: SELECT SUM(CustomerID) FROM Customers;
+INFO:root:Results:
+INFO:root:(Decimal('1433566'),)
+INFO:root:Executing Query 13: Count records in OrderDetails
+INFO:root:SQL: SELECT COUNT(*) FROM OrderDetails;
+INFO:root:Results:
+INFO:root:(292,)
+INFO:root:Executing Query 14: Select all from OrderDetails
+INFO:root:SQL: SELECT * FROM OrderDetails LIMIT 5;
+INFO:root:Results:
+INFO:root:(25, 6757, 8955, 902)
+INFO:root:(69, 3193, 9524, 2900)
+INFO:root:(75, 6506, 4587, 6197)
+INFO:root:(131, 2356, 2649, 2582)
+INFO:root:(143, 8039, 9680, 4072)
+INFO:root:Executing Query 15: Inner Join OrderDetails with itself using composite keys
+INFO:root:SQL: SELECT A.* FROM OrderDetails A INNER JOIN OrderDetails B ON A.O = B.O AND A.r = B.r AND A.d = B.d AND A.e = B.e AND A.r = B.r AND A.D = B.D AND A.e = B.e AND A.t = B.t AND A.a = B.a AND A.i = B.i AND A.l = B.l AND A.I = B.I AND A.D = B.D LIMIT 5;
+ERROR:root:Error executing Query 15: (1054, "Unknown column 'A.O' in 'on clause'")
+ERROR:root:Failed SQL: SELECT A.* FROM OrderDetails A INNER JOIN OrderDetails B ON A.O = B.O AND A.r = B.r AND A.d = B.d AND A.e = B.e AND A.r = B.r AND A.D = B.D AND A.e = B.e AND A.t = B.t AND A.a = B.a AND A.i = B.i AND A.l = B.l AND A.I = B.I AND A.D = B.D LIMIT 5;
+INFO:root:Executing Query 16: Left Join OrderDetails with itself using composite keys
+INFO:root:SQL: SELECT A.* FROM OrderDetails A LEFT JOIN OrderDetails B ON A.O = B.O AND A.r = B.r AND A.d = B.d AND A.e = B.e AND A.r = B.r AND A.D = B.D AND A.e = B.e AND A.t = B.t AND A.a = B.a AND A.i = B.i AND A.l = B.l AND A.I = B.I AND A.D = B.D LIMIT 5;
+ERROR:root:Error executing Query 16: (1054, "Unknown column 'A.O' in 'on clause'")
+ERROR:root:Failed SQL: SELECT A.* FROM OrderDetails A LEFT JOIN OrderDetails B ON A.O = B.O AND A.r = B.r AND A.d = B.d AND A.e = B.e AND A.r = B.r AND A.D = B.D AND A.e = B.e AND A.t = B.t AND A.a = B.a AND A.i = B.i AND A.l = B.l AND A.I = B.I AND A.D = B.D LIMIT 5;
+INFO:root:Executing Query 17: Average of OrderDetailID in OrderDetails
+INFO:root:SQL: SELECT AVG(OrderDetailID) FROM OrderDetails;
+INFO:root:Results:
+INFO:root:(Decimal('4990.5103'),)
+INFO:root:Executing Query 18: Sum of OrderDetailID in OrderDetails
+INFO:root:SQL: SELECT SUM(OrderDetailID) FROM OrderDetails;
+INFO:root:Results:
+INFO:root:(Decimal('1457229'),)
+INFO:root:Executing Query 19: Average of OrderID in OrderDetails
+INFO:root:SQL: SELECT AVG(OrderID) FROM OrderDetails;
+INFO:root:Results:
+INFO:root:(Decimal('4583.7534'),)
+INFO:root:Executing Query 20: Sum of OrderID in OrderDetails
+INFO:root:SQL: SELECT SUM(OrderID) FROM OrderDetails;
+INFO:root:Results:
+INFO:root:(Decimal('1338456'),)
+INFO:root:Executing Query 21: Average of ProductID in OrderDetails
+INFO:root:SQL: SELECT AVG(ProductID) FROM OrderDetails;
+INFO:root:Results:
+INFO:root:(Decimal('5468.6610'),)
+INFO:root:Executing Query 22: Sum of ProductID in OrderDetails
+INFO:root:SQL: SELECT SUM(ProductID) FROM OrderDetails;
+INFO:root:Results:
+INFO:root:(Decimal('1596849'),)
+INFO:root:Executing Query 23: Average of Quantity in OrderDetails
+INFO:root:SQL: SELECT AVG(Quantity) FROM OrderDetails;
+INFO:root:Results:
+INFO:root:(Decimal('5058.5856'),)
+INFO:root:Executing Query 24: Sum of Quantity in OrderDetails
+INFO:root:SQL: SELECT SUM(Quantity) FROM OrderDetails;
+INFO:root:Results:
+INFO:root:(Decimal('1477107'),)
+INFO:root:Executing Query 25: Count records in Orders
+INFO:root:SQL: SELECT COUNT(*) FROM Orders;
+INFO:root:Results:
+INFO:root:(295,)
+INFO:root:Executing Query 26: Select all from Orders
+INFO:root:SQL: SELECT * FROM Orders LIMIT 5;
+INFO:root:Results:
+INFO:root:(81, 4991, datetime.date(1988, 7, 6))
+INFO:root:(99, 7071, datetime.date(1983, 11, 8))
+INFO:root:(130, 9273, datetime.date(1972, 9, 19))
+INFO:root:(185, 8942, datetime.date(1984, 6, 14))
+INFO:root:(294, 870, datetime.date(2009, 7, 29))
+INFO:root:Executing Query 27: Inner Join Orders with itself using composite keys
+INFO:root:SQL: SELECT A.* FROM Orders A INNER JOIN Orders B ON A.O = B.O AND A.r = B.r AND A.d = B.d AND A.e = B.e AND A.r = B.r AND A.I = B.I AND A.D = B.D LIMIT 5;
+ERROR:root:Error executing Query 27: (1054, "Unknown column 'A.O' in 'on clause'")
+ERROR:root:Failed SQL: SELECT A.* FROM Orders A INNER JOIN Orders B ON A.O = B.O AND A.r = B.r AND A.d = B.d AND A.e = B.e AND A.r = B.r AND A.I = B.I AND A.D = B.D LIMIT 5;
+INFO:root:Executing Query 28: Left Join Orders with itself using composite keys
+INFO:root:SQL: SELECT A.* FROM Orders A LEFT JOIN Orders B ON A.O = B.O AND A.r = B.r AND A.d = B.d AND A.e = B.e AND A.r = B.r AND A.I = B.I AND A.D = B.D LIMIT 5;
+ERROR:root:Error executing Query 28: (1054, "Unknown column 'A.O' in 'on clause'")
+ERROR:root:Failed SQL: SELECT A.* FROM Orders A LEFT JOIN Orders B ON A.O = B.O AND A.r = B.r AND A.d = B.d AND A.e = B.e AND A.r = B.r AND A.I = B.I AND A.D = B.D LIMIT 5;
+INFO:root:Executing Query 29: Average of OrderID in Orders
+INFO:root:SQL: SELECT AVG(OrderID) FROM Orders;
+INFO:root:Results:
+INFO:root:(Decimal('4758.1831'),)
+INFO:root:Executing Query 30: Sum of OrderID in Orders
+INFO:root:SQL: SELECT SUM(OrderID) FROM Orders;
+INFO:root:Results:
+INFO:root:(Decimal('1403664'),)
+INFO:root:Executing Query 31: Average of CustomerID in Orders
+INFO:root:SQL: SELECT AVG(CustomerID) FROM Orders;
+INFO:root:Results:
+INFO:root:(Decimal('4715.5763'),)
+INFO:root:Executing Query 32: Sum of CustomerID in Orders
+INFO:root:SQL: SELECT SUM(CustomerID) FROM Orders;
+INFO:root:Results:
+INFO:root:(Decimal('1391095'),)
+INFO:root:Executing Query 33: Count records in Products
+INFO:root:SQL: SELECT COUNT(*) FROM Products;
+INFO:root:Results:
+INFO:root:(294,)
+INFO:root:Executing Query 34: Select all from Products
+INFO:root:SQL: SELECT * FROM Products LIMIT 5;
+INFO:root:Results:
+INFO:root:(20, 'Cassie Stanley', 3894, 1042, Decimal('0.00'), 2128)
+INFO:root:(32, 'Morgan Davis DDS', 7618, 2133, Decimal('0.00'), 5169)
+INFO:root:(51, 'Erin Graham', 3985, 3551, Decimal('0.00'), 6833)
+INFO:root:(80, 'Heidi Garcia', 73, 696, Decimal('0.00'), 8268)
+INFO:root:(113, 'Elizabeth Moore', 1721, 9746, Decimal('0.00'), 730)
+INFO:root:Executing Query 35: Inner Join Products with itself using composite keys
+INFO:root:SQL: SELECT A.* FROM Products A INNER JOIN Products B ON A.P = B.P AND A.r = B.r AND A.o = B.o AND A.d = B.d AND A.u = B.u AND A.c = B.c AND A.t = B.t AND A.I = B.I AND A.D = B.D LIMIT 5;
+ERROR:root:Error executing Query 35: (1054, "Unknown column 'A.P' in 'on clause'")
+ERROR:root:Failed SQL: SELECT A.* FROM Products A INNER JOIN Products B ON A.P = B.P AND A.r = B.r AND A.o = B.o AND A.d = B.d AND A.u = B.u AND A.c = B.c AND A.t = B.t AND A.I = B.I AND A.D = B.D LIMIT 5;
+INFO:root:Executing Query 36: Left Join Products with itself using composite keys
+INFO:root:SQL: SELECT A.* FROM Products A LEFT JOIN Products B ON A.P = B.P AND A.r = B.r AND A.o = B.o AND A.d = B.d AND A.u = B.u AND A.c = B.c AND A.t = B.t AND A.I = B.I AND A.D = B.D LIMIT 5;
+ERROR:root:Error executing Query 36: (1054, "Unknown column 'A.P' in 'on clause'")
+ERROR:root:Failed SQL: SELECT A.* FROM Products A LEFT JOIN Products B ON A.P = B.P AND A.r = B.r AND A.o = B.o AND A.d = B.d AND A.u = B.u AND A.c = B.c AND A.t = B.t AND A.I = B.I AND A.D = B.D LIMIT 5;
+INFO:root:Executing Query 37: Average of ProductID in Products
+INFO:root:SQL: SELECT AVG(ProductID) FROM Products;
+INFO:root:Results:
+INFO:root:(Decimal('5117.7381'),)
+INFO:root:Executing Query 38: Sum of ProductID in Products
+INFO:root:SQL: SELECT SUM(ProductID) FROM Products;
+INFO:root:Results:
+INFO:root:(Decimal('1504615'),)
+INFO:root:Executing Query 39: Average of CategoryID in Products
+INFO:root:SQL: SELECT AVG(CategoryID) FROM Products;
+INFO:root:Results:
+INFO:root:(Decimal('5248.3605'),)
+INFO:root:Executing Query 40: Sum of CategoryID in Products
+INFO:root:SQL: SELECT SUM(CategoryID) FROM Products;
+INFO:root:Results:
+INFO:root:(Decimal('1543018'),)
+INFO:root:Executing Query 41: Average of SupplierID in Products
+INFO:root:SQL: SELECT AVG(SupplierID) FROM Products;
+INFO:root:Results:
+INFO:root:(Decimal('4948.3878'),)
+INFO:root:Executing Query 42: Sum of SupplierID in Products
+INFO:root:SQL: SELECT SUM(SupplierID) FROM Products;
+INFO:root:Results:
+INFO:root:(Decimal('1454826'),)
+INFO:root:Executing Query 43: Average of StockQuantity in Products
+INFO:root:SQL: SELECT AVG(StockQuantity) FROM Products;
+INFO:root:Results:
+INFO:root:(Decimal('4886.7619'),)
+INFO:root:Executing Query 44: Sum of StockQuantity in Products
+INFO:root:SQL: SELECT SUM(StockQuantity) FROM Products;
+INFO:root:Results:
+INFO:root:(Decimal('1436708'),)
+INFO:root:Executing Query 45: Count records in ProductTags
+INFO:root:SQL: SELECT COUNT(*) FROM ProductTags;
+INFO:root:Results:
+INFO:root:(298,)
+INFO:root:Executing Query 46: Select all from ProductTags
+INFO:root:SQL: SELECT * FROM ProductTags LIMIT 5;
+INFO:root:Results:
+INFO:root:(1890, 73)
+INFO:root:(2825, 73)
+INFO:root:(6508, 190)
+INFO:root:(633, 230)
+INFO:root:(3163, 230)
+INFO:root:Executing Query 47: Inner Join ProductTags with itself using composite keys
+INFO:root:SQL: SELECT A.* FROM ProductTags A INNER JOIN ProductTags B ON A.P = B.P AND A.r = B.r AND A.o = B.o AND A.d = B.d AND A.u = B.u AND A.c = B.c AND A.t = B.t AND A.I = B.I AND A.D = B.D LIMIT 5;
+ERROR:root:Error executing Query 47: (1054, "Unknown column 'A.P' in 'on clause'")
+ERROR:root:Failed SQL: SELECT A.* FROM ProductTags A INNER JOIN ProductTags B ON A.P = B.P AND A.r = B.r AND A.o = B.o AND A.d = B.d AND A.u = B.u AND A.c = B.c AND A.t = B.t AND A.I = B.I AND A.D = B.D LIMIT 5;
+INFO:root:Executing Query 48: Left Join ProductTags with itself using composite keys
+INFO:root:SQL: SELECT A.* FROM ProductTags A LEFT JOIN ProductTags B ON A.P = B.P AND A.r = B.r AND A.o = B.o AND A.d = B.d AND A.u = B.u AND A.c = B.c AND A.t = B.t AND A.I = B.I AND A.D = B.D LIMIT 5;
+ERROR:root:Error executing Query 48: (1054, "Unknown column 'A.P' in 'on clause'")
+ERROR:root:Failed SQL: SELECT A.* FROM ProductTags A LEFT JOIN ProductTags B ON A.P = B.P AND A.r = B.r AND A.o = B.o AND A.d = B.d AND A.u = B.u AND A.c = B.c AND A.t = B.t AND A.I = B.I AND A.D = B.D LIMIT 5;
+INFO:root:Executing Query 49: Average of ProductID in ProductTags
+INFO:root:SQL: SELECT AVG(ProductID) FROM ProductTags;
+INFO:root:Results:
+INFO:root:(Decimal('4923.4362'),)
+INFO:root:Executing Query 50: Sum of ProductID in ProductTags
+INFO:root:SQL: SELECT SUM(ProductID) FROM ProductTags;
+INFO:root:Results:
+INFO:root:(Decimal('1467184'),)
+INFO:root:Executing Query 51: Average of TagID in ProductTags
+INFO:root:SQL: SELECT AVG(TagID) FROM ProductTags;
+INFO:root:Results:
+INFO:root:(Decimal('5121.9060'),)
+INFO:root:Executing Query 52: Sum of TagID in ProductTags
+INFO:root:SQL: SELECT SUM(TagID) FROM ProductTags;
+INFO:root:Results:
+INFO:root:(Decimal('1526328'),)
+INFO:root:Executing Query 53: Count records in Suppliers
+INFO:root:SQL: SELECT COUNT(*) FROM Suppliers;
+INFO:root:Results:
+INFO:root:(297,)
+INFO:root:Executing Query 54: Select all from Suppliers
+INFO:root:SQL: SELECT * FROM Suppliers LIMIT 5;
+INFO:root:Results:
+INFO:root:(172, 'Cynthia Salas', 'omendoza@example.org')
+INFO:root:(191, 'Natalie Miller', 'erika66@example.net')
+INFO:root:(229, 'Timothy Torres', 'johnsonmelissa@example.net')
+INFO:root:(256, 'Wendy Tyler', 'alanadkins@example.org')
+INFO:root:(293, 'Mark Payne', 'james70@example.net')
+INFO:root:Executing Query 55: Inner Join Suppliers with itself using composite keys
+INFO:root:SQL: SELECT A.* FROM Suppliers A INNER JOIN Suppliers B ON A.S = B.S AND A.u = B.u AND A.p = B.p AND A.p = B.p AND A.l = B.l AND A.i = B.i AND A.e = B.e AND A.r = B.r AND A.I = B.I AND A.D = B.D LIMIT 5;
+ERROR:root:Error executing Query 55: (1054, "Unknown column 'A.S' in 'on clause'")
+ERROR:root:Failed SQL: SELECT A.* FROM Suppliers A INNER JOIN Suppliers B ON A.S = B.S AND A.u = B.u AND A.p = B.p AND A.p = B.p AND A.l = B.l AND A.i = B.i AND A.e = B.e AND A.r = B.r AND A.I = B.I AND A.D = B.D LIMIT 5;
+INFO:root:Executing Query 56: Left Join Suppliers with itself using composite keys
+INFO:root:SQL: SELECT A.* FROM Suppliers A LEFT JOIN Suppliers B ON A.S = B.S AND A.u = B.u AND A.p = B.p AND A.p = B.p AND A.l = B.l AND A.i = B.i AND A.e = B.e AND A.r = B.r AND A.I = B.I AND A.D = B.D LIMIT 5;
+ERROR:root:Error executing Query 56: (1054, "Unknown column 'A.S' in 'on clause'")
+ERROR:root:Failed SQL: SELECT A.* FROM Suppliers A LEFT JOIN Suppliers B ON A.S = B.S AND A.u = B.u AND A.p = B.p AND A.p = B.p AND A.l = B.l AND A.i = B.i AND A.e = B.e AND A.r = B.r AND A.I = B.I AND A.D = B.D LIMIT 5;
+INFO:root:Executing Query 57: Average of SupplierID in Suppliers
+INFO:root:SQL: SELECT AVG(SupplierID) FROM Suppliers;
+INFO:root:Results:
+INFO:root:(Decimal('4860.0236'),)
+INFO:root:Executing Query 58: Sum of SupplierID in Suppliers
+INFO:root:SQL: SELECT SUM(SupplierID) FROM Suppliers;
+INFO:root:Results:
+INFO:root:(Decimal('1443427'),)
+INFO:root:Executing Query 59: Count records in Tags
+INFO:root:SQL: SELECT COUNT(*) FROM Tags;
+INFO:root:Results:
+INFO:root:(293,)
+INFO:root:Executing Query 60: Select all from Tags
+INFO:root:SQL: SELECT * FROM Tags LIMIT 5;
+INFO:root:Results:
+INFO:root:(6, 'Aaron Miller')
+INFO:root:(8109, 'Abigail Terry')
+INFO:root:(5631, 'Adrian Peterson')
+INFO:root:(4911, 'Alan Garcia')
+INFO:root:(5314, 'Alexander Robinson')
+INFO:root:Executing Query 61: Inner Join Tags with itself using composite keys
+INFO:root:SQL: SELECT A.* FROM Tags A INNER JOIN Tags B ON A.T = B.T AND A.a = B.a AND A.g = B.g AND A.I = B.I AND A.D = B.D LIMIT 5;
+ERROR:root:Error executing Query 61: (1054, "Unknown column 'A.T' in 'on clause'")
+ERROR:root:Failed SQL: SELECT A.* FROM Tags A INNER JOIN Tags B ON A.T = B.T AND A.a = B.a AND A.g = B.g AND A.I = B.I AND A.D = B.D LIMIT 5;
+INFO:root:Executing Query 62: Left Join Tags with itself using composite keys
+INFO:root:SQL: SELECT A.* FROM Tags A LEFT JOIN Tags B ON A.T = B.T AND A.a = B.a AND A.g = B.g AND A.I = B.I AND A.D = B.D LIMIT 5;
+ERROR:root:Error executing Query 62: (1054, "Unknown column 'A.T' in 'on clause'")
+ERROR:root:Failed SQL: SELECT A.* FROM Tags A LEFT JOIN Tags B ON A.T = B.T AND A.a = B.a AND A.g = B.g AND A.I = B.I AND A.D = B.D LIMIT 5;
+INFO:root:Executing Query 63: Average of TagID in Tags
+INFO:root:SQL: SELECT AVG(TagID) FROM Tags;
+INFO:root:Results:
+INFO:root:(Decimal('4896.6382'),)
+INFO:root:Executing Query 64: Sum of TagID in Tags
+INFO:root:SQL: SELECT SUM(TagID) FROM Tags;
+INFO:root:Results:
+INFO:root:(Decimal('1434715'),)

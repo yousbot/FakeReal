@@ -1,0 +1,10 @@
+README.md
+setup.py
+fakereal/__init__.py
+fakereal/fakereal.py
+fakereal/test_seedpy.py
+fakereal.egg-info/PKG-INFO
+fakereal.egg-info/SOURCES.txt
+fakereal.egg-info/dependency_links.txt
+fakereal.egg-info/requires.txt
+fakereal.egg-info/top_level.txt
